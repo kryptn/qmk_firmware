@@ -1,0 +1,13 @@
+name: Keyboard firmware build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: build
+      run: ./util/docker_build.sh planck/ez:kryptn
