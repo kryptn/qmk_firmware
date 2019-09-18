@@ -36,6 +36,7 @@ enum planck_layers {
   _NAV,
   _RMOUSE,
   _NUMPAD,
+  _F_KEYS,
 };
 
 #include "dynamic_macro.h"
@@ -52,19 +53,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_planck_grid(
       KC_GRAVE, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,          KC_8,                KC_9,              KC_0,            _______,
-      _______,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINUS,      KC_EQUAL,            KC_LBRACKET,       KC_RBRACKET,     KC_BSLASH,
-      _______,  KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_HOME,           KC_END,          _______,
+      _______,  _______, _______, _______, _______, _______, _______, KC_MINUS,      KC_EQUAL,            KC_LBRACKET,       KC_RBRACKET,     KC_BSLASH,
+      _______,  _______, _______, _______, _______, _______, _______, KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_HOME,           KC_END,          _______,
       _______,  _______, _______, _______, _______, _______, KC_NO,   _______,       KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
 
   [_RAISE] = LAYOUT_planck_grid(
-      KC_TILD, KC_EXLM,  KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,       KC_ASTR,             KC_LPRN,           KC_RPRN,         _______,
-      _______, KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,       KC_PLUS,             KC_LCBR,           KC_RCBR,         KC_PIPE,
-      _______, KC_F7,    KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_PGUP,           KC_PGDOWN,       _______,
-      _______, _______,  _______, _______, _______, _______, KC_NO,   _______,       KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
+      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,       KC_ASTR,             KC_LPRN,           KC_RPRN,         _______,
+      _______, _______, _______, _______, _______, _______, _______, KC_UNDS,       KC_PLUS,             KC_LCBR,           KC_RCBR,         KC_PIPE,
+      _______, _______, _______, _______, _______, _______, _______, KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_PGUP,           KC_PGDOWN,       _______,
+      _______, _______, _______, _______, _______, _______,  KC_NO,   _______,       KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
 
   [_ADJUST] = LAYOUT_planck_grid(
       _______, _______, _______, _______, _______, DYN_REC_STOP,    _______,         _______, _______, _______, _______, _______,
-      _______, _______, AU_ON,   AU_OFF,  AU_TOG,  DYN_REC_START1,  DYN_REC_START2,  RGB_TOG, RGB_VAI, RGB_VAD, _______, RESET,
+      MO(7),   _______, AU_ON,   AU_OFF,  AU_TOG,  DYN_REC_START1,  DYN_REC_START2,  RGB_TOG, RGB_VAI, RGB_VAD, _______, RESET,
       _______, _______, MU_ON,   MU_OFF,  MU_TOG,  DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, RGB_MOD, RGB_HUI, RGB_HUD, _______, _______,
       MO(6),   _______, _______, _______, _______, _______,         KC_NO,           _______, _______, _______, _______, _______),
 
@@ -86,7 +87,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______, _______, KC_1, KC_2,    KC_3,    KC_KP_MINUS,    _______,
       _______, _______, _______, _______, _______, _______, KC_NO,   KC_0, _______, KC_DOT,  KC_KP_PLUS,     _______),
 
+  [_F_KEYS] = LAYOUT_planck_grid(
+      KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+      _______, _______, _______, _______, _______, _______, KC_NO,   _______, _______, _______, _______, _______),
+
+//   [_EMPTY] = LAYOUT_planck_grid(
+//       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+//       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+//       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+//       _______, _______, _______, _______, _______, _______, KC_NO,   _______, _______, _______, _______, _______),
+
 };
+
+
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
