@@ -52,16 +52,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_HYPR,         KC_LCTRL, KC_LALT, KC_LGUI, LOWER, KC_SPACE, KC_NO, RAISE, KC_LEFT,  KC_DOWN, KC_UP,     KC_RIGHT),
 
   [_LOWER] = LAYOUT_planck_grid(
-      KC_GRAVE, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,          KC_8,                KC_9,              KC_0,            _______,
-      _______,  _______, _______, _______, _______, _______, _______, KC_MINUS,      KC_EQUAL,            KC_LBRACKET,       KC_RBRACKET,     KC_BSLASH,
-      _______,  _______, _______, _______, _______, _______, _______, KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_HOME,           KC_END,          _______,
-      _______,  _______, _______, _______, _______, _______, KC_NO,   _______,       KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
+      KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,     KC_8,                KC_9,              KC_0,            _______,
+      _______, _______, _______, _______, _______, _______, _______, KC_MINUS, KC_EQUAL,            KC_LBRACKET,       KC_RBRACKET,     KC_BSLASH,
+      _______, _______, _______, _______, _______, _______, _______, _______,  _______,             _______,           _______,         _______,
+      _______, _______, _______, _______, _______, _______, KC_NO,   _______,  KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
 
   [_RAISE] = LAYOUT_planck_grid(
-      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,       KC_ASTR,             KC_LPRN,           KC_RPRN,         _______,
-      _______, _______, _______, _______, _______, _______, _______, KC_UNDS,       KC_PLUS,             KC_LCBR,           KC_RCBR,         KC_PIPE,
-      _______, _______, _______, _______, _______, _______, _______, KC_NONUS_HASH, KC_NONUS_BSLASH,     KC_PGUP,           KC_PGDOWN,       _______,
-      _______, _______, _______, _______, _______, _______,  KC_NO,   _______,       KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
+      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR,             KC_LPRN,           KC_RPRN,         _______,
+      _______, _______, _______, _______, _______, _______, _______, KC_UNDS, KC_PLUS,             KC_LCBR,           KC_RCBR,         KC_PIPE,
+      _______, _______, _______, _______, _______, _______, _______, _______, _______,             _______,           _______,         _______,
+      _______, _______, _______, _______, _______, _______, KC_NO,   _______, KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
 
   [_ADJUST] = LAYOUT_planck_grid(
       _______, _______, _______, _______, _______, DYN_REC_STOP,    _______,         _______, _______, _______, _______, _______,
