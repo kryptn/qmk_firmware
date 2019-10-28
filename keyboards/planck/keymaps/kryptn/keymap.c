@@ -48,8 +48,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_planck_grid(
       KC_TAB,          KC_Q,     KC_W,    KC_E,    KC_R,  KC_T,     KC_Y,  KC_U,  KC_I,     KC_O,    KC_P,      KC_BSPACE,
       LT(4,KC_ESCAPE), KC_A,     KC_S,    KC_D,    KC_F,  KC_G,     KC_H,  KC_J,  KC_K,     KC_L,    KC_SCOLON, KC_QUOTE,
-      KC_LSPO,         KC_Z,     KC_X,    KC_C,    KC_V,  KC_B,     KC_N,  KC_M,  KC_COMMA, KC_DOT,  KC_SLASH,  MT(MOD_RSFT, KC_ENTER),
-      KC_HYPR,         KC_LCTRL, KC_LALT, KC_LGUI, LOWER, KC_SPACE, KC_NO, RAISE, KC_LEFT,  KC_DOWN, KC_UP,     KC_RIGHT),
+      KC_LSHIFT,       KC_Z,     KC_X,    KC_C,    KC_V,  KC_B,     KC_N,  KC_M,  KC_COMMA, KC_DOT,  KC_SLASH,  MT(MOD_RSFT, KC_ENTER),
+      KC_LCTRL,        KC_LALT,  KC_LGUI, KC_HYPR, LOWER, KC_SPACE, KC_NO, RAISE, KC_LEFT,  KC_DOWN, KC_UP,     KC_RIGHT),
 
   [_LOWER] = LAYOUT_planck_grid(
       KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,     KC_8,                KC_9,              KC_0,            _______,
@@ -70,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       MO(6),   _______, _______, _______, _______, _______,         KC_NO,           _______, _______, _______, _______, _______),
 
   [_NAV] = LAYOUT_planck_grid(
-      _______, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MS_WH_UP,   _______, _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DELETE,
-      _______, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_MS_WH_DOWN, _______, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______,
-      _______, _______,    _______,    _______,     _______,       _______, KC_END,  _______, _______, _______,   _______, _______,
-      _______, _______,    _______,    _______,     KC_MS_BTN1,    _______, KC_NO,   MO(5),   _______, _______,   _______, _______),
+      _______, _______, _______, _______, _______,    _______, _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DELETE,
+      _______, _______, _______, _______, _______,    _______, KC_HOME, KC_LEFT, KC_DOWN, KC_RIGHT,  _______, _______,
+      _______, _______, _______, _______, _______,    _______, KC_END,  _______, _______, _______,   _______, _______,
+      _______, _______, _______, _______, KC_MS_BTN1, _______, KC_NO,   MO(5),   _______, _______,   _______, _______),
 
   [_RMOUSE] = LAYOUT_planck_grid(
       _______, _______, _______, _______, _______, _______, _______, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MS_WH_UP,   _______,
