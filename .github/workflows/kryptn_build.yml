@@ -6,8 +6,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
+
     steps:
     - uses: actions/checkout@v1
     - name: build
-      run: ./util/docker_build.sh planck/ez:kryptn
+      run: sed 's/ \-it//g' ./util/docker_build.sh > actions.sh | chmod +x actions.sh | /actions.sh planck/ez:kryptn
