@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: build
       run: |
+          make git-submodule
           sed 's/ \-it//g' ./util/docker_build.sh > actions.sh
           chmod +x actions.sh
           ./actions.sh planck/ez:kryptn
