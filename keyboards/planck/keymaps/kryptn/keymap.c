@@ -64,10 +64,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       _______, _______, _______, _______, _______, _______, KC_NO,   _______, KC_MEDIA_NEXT_TRACK, KC_AUDIO_VOL_DOWN, KC_AUDIO_VOL_UP, KC_MEDIA_PLAY_PAUSE),
 
   [_ADJUST] = LAYOUT_planck_grid(
-      _______, _______, _______, _______, _______, DYN_REC_STOP,    _______,         _______, _______, _______, _______, _______,
-      MO(7),   _______, AU_ON,   AU_OFF,  AU_TOG,  DYN_REC_START1,  DYN_REC_START2,  RGB_TOG, RGB_VAI, RGB_VAD, _______, RESET,
-      _______, _______, MU_ON,   MU_OFF,  MU_TOG,  DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, RGB_MOD, RGB_HUI, RGB_HUD, _______, _______,
-      MO(6),   _______, _______, _______, _______, _______,         KC_NO,           _______, _______, _______, _______, _______),
+      _______, _______, _______, _______, _______, DYN_REC_STOP,    _______,         _______, _______, _______, KC_PSCREEN, _______,
+      MO(7),   _______, AU_ON,   AU_OFF,  AU_TOG,  DYN_REC_START1,  DYN_REC_START2,  RGB_TOG, RGB_VAI, RGB_VAD, _______,    RESET,
+      _______, _______, MU_ON,   MU_OFF,  MU_TOG,  DYN_MACRO_PLAY1, DYN_MACRO_PLAY2, RGB_MOD, RGB_HUI, RGB_HUD, _______,    _______,
+      MO(6),   _______, _______, _______, _______, _______,         KC_NO,           _______, _______, _______, _______,    _______),
 
   [_NAV] = LAYOUT_planck_grid(
       _______, _______, _______, _______, _______, _______, _______, KC_PGUP, KC_UP,   KC_PGDOWN, _______, KC_DELETE,
