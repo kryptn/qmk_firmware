@@ -9,9 +9,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: build
+    - name: setup
       run: |
           make git-submodule
           sed 's/ \-it//g' ./util/docker_build.sh > actions.sh
           chmod +x actions.sh
+    - name: build
+      run: |
           ./actions.sh planck/ez:kryptn
+    - name: store firmware
+      uses: actions/upload-artifact@v1
+      with:
+        name: firmware
+        path: ./planck_ez_kryptn.bin
